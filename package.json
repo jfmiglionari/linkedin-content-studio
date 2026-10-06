@@ -1,0 +1,58 @@
+{
+  "name": "linkedin-content-studio",
+  "version": "1.0.0",
+  "description": "App desktop para criar conteúdo de LinkedIn com IA",
+  "main": "./out/main/index.js",
+  "author": "jmiglionari",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "package": "electron-vite build && electron-builder --mac"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.5",
+    "@google/genai": "^2.13.0",
+    "mammoth": "^1.12.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@electron-toolkit/utils": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "allowScripts": {
+    "electron@33.4.11": true,
+    "esbuild@0.25.12": true,
+    "fsevents@2.3.3": true,
+    "protobufjs@7.6.5": true,
+    "@google/genai@2.13.0": true
+  },
+  "build": {
+    "appId": "com.linkedincontentstudio.app",
+    "productName": "LinkedIn Content Studio",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "out/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dir"
+      ],
+      "identity": null
+    }
+  }
+}
