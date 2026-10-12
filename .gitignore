@@ -3,3 +3,12 @@ out/
 dist/
 .DS_Store
 *.log
+
+# Modelo do escritório (P9), 12/10/2026
+ESTADO.md
+briefings/
+dados/
+.env
+*.numbers
+*.xlsx
+*.csv
